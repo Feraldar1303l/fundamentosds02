@@ -1,0 +1,53 @@
+<h3>Home</h3>
+
+<table class="table">
+    <tr>
+        <td>Esta es una varibale tipo string:</td>
+        <td>{{ nombre }}</td>
+    </tr>
+
+    <tr>
+        <td>Esta es la misma varibale pero en mayusculas:</td>
+        <td>{{ nombre | uppercase }}</td>
+    </tr>
+
+    <tr>
+        <td>Esta es una varibale tipo numerica:</td>
+        <td>{{ nota }}</td>
+    </tr>
+
+    <tr>
+        <td>Esta es una operacion con la varibale</td>
+        <td>{{ nota + 100 }}</td>
+    </tr>
+</table>
+<br /> <br />
+
+<!-- Cambiamos el varlor de la variable nombre -->
+
+<input type="text" class="form-control" placeholder="Escribe tu nmbre" [(ngModel)]="nombre" />
+
+<br /><br />
+<!-- invocar el metdo cambiarValor-->
+
+<button type="button" class="btn btn-dark" (click)="cambiarValores()">
+    Cambiar Valores 
+</button>
+<br /> <br />
+<!--Ejemplos de condicionales ngIF-->
+    <h4 *ngIf="existo">La variable es verdadera</h4>
+
+    <h4 *ngIf="!existo">La variable es falsa</h4>
+
+    <br />
+    <h4 *ngIf="5>3">Es verdadera</h4>
+
+
+    <br /><br/>
+    <!-- ejemplode uin ciclo for-->
+    
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let persona of personas">
+            {{ persona }}
+        </li>
+    </ul>

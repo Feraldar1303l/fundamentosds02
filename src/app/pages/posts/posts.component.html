@@ -1,0 +1,8 @@
+<h2>Posts</h2>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let mensaje of mensajes">
+        <h4>{{ mensaje.title }}</h4>
+        <p>{{ mensaje.body }}</p>
+    </li>
+</ul>
